@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".n.activity.fragments.SongFragment">
+
+    <RelativeLayout
+        android:id="@+id/relativeLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:id="@+id/totalSong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="12dp"
+            android:text="00 Songs"
+            android:textColor="@color/black"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:id="@+id/shuffle"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_marginEnd="20dp"
+            android:layout_toStartOf="@id/list_grid"
+            android:src="@drawable/shuffle"
+            app:tint="@color/black" />
+
+        <ImageView
+            android:id="@+id/list_grid"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/list"
+            app:tint="@color/black" />
+
+    </RelativeLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/relativeLay">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/musicRV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/emptyEmoji"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/emptyText"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="16dp"
+        android:text="@string/empty_text_emoji"
+        android:textAppearance="@style/TextViewHeadline3" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/emptyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:text="@string/nothing_to_see"
+        android:textAppearance="@style/TextViewHeadline5"
+        android:textColor="@color/black"
+        tools:visibility="visible" />
+
+    <com.trendyol.bubblescrollbarlib.BubbleScrollBar
+        android:id="@+id/bubbleScrollBar"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:orientation="vertical"
+        app:bubbleBackground="@drawable/fast_scroll_thumb"
+        app:bubbleElevation="6dp"
+        app:bubbleHeight="50dp"
+        app:bubbleMargin="4dp"
+        app:bubbleMinWidth="50dp"
+        app:bubblePadding="4dp"
+        app:bubbleTextColor="@color/default_bubble_text_color"
+        app:bubbleTextSize="8sp"
+        app:scrollbarBackground="@color/blue"
+        app:thumbBackground="@color/green" />
+
+    <com.example.s.player.n.activity.widgets.FastScroller
+        android:id="@+id/fastScroller"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

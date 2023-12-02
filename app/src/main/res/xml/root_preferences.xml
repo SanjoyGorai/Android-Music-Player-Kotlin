@@ -1,0 +1,23 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.kizitonwose.colorpreferencecompat.ColorPreferenceCompat
+        android:defaultValue="@color/red"
+        android:key="key"
+        android:title="Choose color" />
+
+    <PreferenceCategory
+        app:iconSpaceReserved="false"
+        app:title="@string/messages_header">
+
+        <EditTextPreference
+            app:iconSpaceReserved="false"
+            app:key="signature"
+            app:title="@string/signature_title"
+            app:useSimpleSummaryProvider="true" />
+
+
+    </PreferenceCategory>
+
+
+</PreferenceScreen>

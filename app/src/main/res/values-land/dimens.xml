@@ -1,0 +1,6 @@
+<resources>
+    <dimen name="fab_margin">48dp</dimen>
+    <dimen name="statusBarHeight">24dp</dimen>
+    <dimen name="appBarTopMargin">24dp</dimen>
+
+</resources>

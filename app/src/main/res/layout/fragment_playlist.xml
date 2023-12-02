@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:background="?attr/selectableItemBackground"
+    android:orientation="vertical"
+    tools:context=".n.activity.fragments.PlaylistFragment">
+
+    <LinearLayout
+        android:id="@+id/create_new_playlist"
+        android:layout_width="match_parent"
+        android:background="?attr/selectableItemBackground"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="50dp"
+            android:background="@drawable/radius_rec"
+            android:padding="8dp"
+            android:src="@drawable/add"
+            app:tint="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="@string/new_playlist"
+            android:textColor="@color/black"
+            android:textSize="17dp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/most_played"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/create_new_playlist"
+        android:background="?attr/selectableItemBackground"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="7dp">
+
+        <ImageView
+            android:id="@+id/star"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:src="@drawable/star"
+            app:tint="@color/black" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@id/star"
+            android:text="@string/most_played"
+            android:id="@+id/most_played_tv"
+            android:textColor="@color/black"
+            android:background="?attr/selectableItemBackground"
+            android:textSize="17dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/more_vert"
+            app:tint="@color/black" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/recent_played"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/most_played"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="?attr/selectableItemBackground"
+        android:padding="7dp">
+
+        <ImageView
+            android:id="@+id/watch"
+            android:layout_width="48dp"
+            android:layout_height="50dp"
+            android:padding="10dp"
+            android:src="@drawable/watch"
+            app:tint="@color/black" />
+
+
+        <TextView
+            android:id="@+id/recent_played_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@id/watch"
+            android:text="@string/recent_played"
+            android:textColor="@color/black"
+            android:textSize="17dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/recent_played_tv"
+            android:layout_marginStart="20dp"
+            android:layout_toEndOf="@id/watch"
+            android:text="@string/new_playlist"
+            android:textColor="@color/black"
+            android:textSize="13dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="?attr/selectableItemBackground"
+            android:layout_centerVertical="true"
+            android:src="@drawable/more_vert"
+            app:tint="@color/black" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/playlistRV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/recent_played"
+        android:background="?android:selectableItemBackground" />
+
+    <LinearLayout
+        android:id="@android:id/empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/emptyEmoji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="@string/empty_text_emoji"
+            android:textAppearance="@style/TextViewHeadline3"
+            android:textColor="@color/black" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/emptyText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/no_songs"
+            android:textAppearance="@style/TextViewHeadline5"
+            android:textColor="@color/black"
+            tools:visibility="visible" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

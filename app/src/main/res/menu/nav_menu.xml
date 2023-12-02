@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/go_pro"
+        android:icon="@drawable/crown"
+        android:title="@string/pro_version" />
+    <item
+        android:id="@+id/nav_drive_mode"
+        android:icon="@drawable/car"
+        android:title="@string/drive_mode" />
+    <item
+        android:id="@+id/equalizer"
+        android:icon="@drawable/equalizer"
+        android:title="@string/Equalizer" />
+    <item
+        android:id="@+id/sleep_timer"
+        app:actionLayout="@layout/sleep_nav"
+        android:icon="@drawable/timer"
+        android:title="@string/sleep_timer" />
+    <item
+        android:id="@+id/nav_theme"
+        android:icon="@drawable/color_theme"
+        android:title="@string/theme" />
+    <item
+        android:id="@+id/nav_settings"
+        android:icon="@drawable/outline_settings"
+        android:title="@string/settings" />
+    <item
+        android:id="@+id/nav_privacy_policy"
+        android:icon="@drawable/privacy_tip"
+        android:title="@string/privacy" />
+<!--    <item-->
+<!--        android:id="@+id/navId"-->
+<!--        android:icon="@drawable/ic_favorite"-->
+<!--        android:title="Name"-->
+<!--        app:actionLayout="@layout/sleep_nav" />-->
+
+    <item
+        android:id="@+id/nav_rate"
+        android:icon="@drawable/rating"
+        android:title="@string/rating" />
+
+</menu>

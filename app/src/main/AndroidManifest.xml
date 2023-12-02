@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SMusicPlayer"
+        tools:targetApi="31">
+        <activity
+            android:name=".n.activity.activities.SearchActivity"
+            android:exported="false" />
+        <activity
+            android:name=".n.activity.activities.ThemeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".n.activity.activities.playlist.PlaylistDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".n.activity.activities.SettingsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_settings" />
+        <activity
+            android:name=".n.activity.activities.QueueActivity"
+            android:exported="false" />
+        <activity
+            android:name=".n.activity.activities.DriveModeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".n.activity.activities.FolderActivity"
+            android:exported="false" />
+        <activity
+            android:name=".n.activity.activities.MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.SMusicPlayer.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".n.activity.activities.SettingsActivity"
+            android:exported="false"
+            android:label="@string/title_activity_settings"
+            tools:ignore="DuplicateActivity" />
+        <activity
+            android:name=".n.activity.activities.PlayerActivity"
+            android:exported="false"
+            android:parentActivityName=".n.activity.activities.MainActivity"
+            android:theme="@style/ActPlayer" />
+        <activity
+            android:name=".n.activity.activities.SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <service android:name=".n.activity.MusicService" />
+
+        <receiver
+            android:name=".n.activity.NotificationReceiver"
+            android:enabled="true" />
+    </application>
+
+</manifest>

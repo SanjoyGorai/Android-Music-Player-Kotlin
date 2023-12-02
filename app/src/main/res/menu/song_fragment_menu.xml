@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<!--    <item-->
+<!--        android:id="@+id/frag_action_search"-->
+<!--        android:icon="@drawable/search"-->
+<!--        android:title="@string/search"-->
+<!--        app:showAsAction="always"-->
+<!--        app:actionViewClass="androidx.appcompat.widget.SearchView" />-->
+
+    <item
+        android:id="@+id/sort_by"
+        android:icon="@drawable/sort"
+        android:iconTint="@color/black"
+        android:title="@string/sort_by" />
+    <item
+        android:id="@+id/equalizer"
+        android:icon="@drawable/equalizer"
+        android:iconTint="@color/black"
+        android:title="@string/Equalizer" />
+    <item
+        android:id="@+id/settings"
+        android:icon="@drawable/outline_settings"
+        android:iconTint="@color/black"
+        android:title="@string/settings" />
+    <item
+        android:id="@+id/theme"
+        android:icon="@drawable/color_theme"
+        android:iconTint="@color/black"
+        android:title="@string/theme" />
+    <item
+        android:id="@+id/refresh"
+        android:icon="@drawable/refresh"
+        android:iconTint="@color/black"
+        android:title="@string/refresh" />
+</menu>

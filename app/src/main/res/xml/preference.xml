@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.preference.PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.kizitonwose.colorpreferencecompat.ColorPreferenceCompat
+        android:defaultValue="@color/red"
+        android:key="@string/pref_key"
+        android:title="Accent Color"
+        app:iconSpaceReserved="false"
+        app:viewSize="large" />
+    <com.kizitonwose.colorpreferencecompat.ColorPreferenceCompat
+        android:defaultValue="@color/green"
+        android:key="@string/pref_key"
+        android:title="Accent Color"
+        app:colorShape="square"
+        app:iconSpaceReserved="false"
+        app:showDialog="false"
+        app:viewSize="large" />
+
+    <!--    <com.kizitonwose.colorpreference.ColorPreference-->
+    <!--        android:defaultValue="@color/red"-->
+    <!--        android:key="@string/pref_key"-->
+    <!--        android:summary="@string/pref_summary"-->
+    <!--        android:title="@string/pref_title"-->
+    <!--        app:colorShape="circle"-->
+    <!--        app:numColumns="5"-->
+    <!--        app:showDialog="true"-->
+    <!--        app:viewSize="large" />-->
+
+    <androidx.preference.SwitchPreferenceCompat
+        android:summary="Dark or light"
+        android:title="Theme"
+        android:key="theme"
+        app:iconSpaceReserved="false" />
+
+    <androidx.preference.CheckBoxPreference
+        android:summary="Portrait"
+        android:title="Mode"
+        android:key="check"
+        app:iconSpaceReserved="false" />
+
+</androidx.preference.PreferenceScreen>

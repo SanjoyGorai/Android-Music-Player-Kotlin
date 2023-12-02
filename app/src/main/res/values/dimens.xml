@@ -1,0 +1,39 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+    <dimen name="toolbarElevation">4dp</dimen>
+    <dimen name="appBarTopMargin">0dp</dimen>
+    <dimen name="statusBarHeight">0dp</dimen>
+    <dimen name="md_dialog_frame_margin">12dp</dimen>
+
+
+    <dimen name="detail_backdrop_height">256dp</dimen>
+    <dimen name="card_margin">16dp</dimen>
+    <dimen name="list_item_avatar_size">40dp</dimen>
+
+    <dimen name="grid_item_padding_left">8.0dip</dimen>
+    <dimen name="grid_item_padding_right">5.0dip</dimen>
+    <dimen name="grid_bottom_height">44dip</dimen>
+    <dimen name="m3_card_large_radius">40dp</dimen>
+
+    <dimen name="spacing_card">10dp</dimen>
+    <dimen name="spacing_card_album_grid">3dp</dimen>
+
+    <item name="letter_to_tile_ratio" type="dimen">53%</item>
+
+    <dimen name="header_height">370dp</dimen>
+    <dimen name="min_header_height">270dp</dimen>
+    <dimen name="header_logo_size">100dp</dimen>
+    <dimen name="toolbar_elevation">4dp</dimen>
+    <dimen name="icon_notification_dimen">32dp</dimen>
+    <dimen name="mini_player_height">56dp</dimen>
+
+    <dimen name="m3_card_corner_radius">16dp</dimen>
+
+</resources>

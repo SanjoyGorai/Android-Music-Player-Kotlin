@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/timer_off"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:padding="5dp"
+        android:text="@string/off"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/timer_10minutes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="6dp"
+        android:padding="5dp"
+        android:text="@string/_10minutes"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/timer_15minutes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="6dp"
+        android:padding="5dp"
+        android:text="@string/_15minutes"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/timer_30minutes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="6dp"
+        android:padding="5dp"
+        android:text="@string/_30minutes"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/timer_60minutes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="6dp"
+        android:padding="5dp"
+        android:text="@string/_60minutes"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/timer_custom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="6dp"
+        android:padding="5dp"
+        android:text="Custom"
+        android:textColor="@color/black" />
+
+</LinearLayout>

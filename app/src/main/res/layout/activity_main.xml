@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:insetForeground="@android:color/transparent"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".n.activity.activities.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appbarLayout">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:backgroundTint="@color/youtube_color" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="2dp"
+            android:layout_below="@id/appbarLayout"
+            android:background="@color/youtube_color"
+            android:overScrollMode="always"
+            android:textAlignment="center"
+            app:tabIndicatorFullWidth="true"
+            app:tabIndicatorAnimationMode="linear"
+            app:tabBackground="?android:selectableItemBackground"
+            app:tabGravity="fill"
+            app:tabIndicator="@color/green"
+            app:tabIndicatorColor="@color/green"
+            app:tabIndicatorGravity="bottom"
+            app:tabIndicatorHeight="1.5dp"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="@color/green"
+            app:tabTextColor="@color/white" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/now_playing_fragment"
+            android:layout_below="@id/tabLayout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tabLayout" />
+
+        <!--        <include-->
+        <!--            android:id="@+id/now_playing_fragment"-->
+        <!--            layout="@layout/fragment_now_playing"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="60dp"-->
+        <!--            android:layout_alignParentBottom="true"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"-->
+        <!--            app:layout_constraintStart_toStartOf="parent" />-->
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/now_playing_fragment"
+            android:name="com.example.s.player.n.activity.fragments.NowPlayingFragment"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_alignParentBottom="true"
+            android:layout="@layout/fragment_now_playing" />
+    </RelativeLayout>
+
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigationView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/white"
+        android:fitsSystemWindows="true"
+        app:drawerLayoutCornerSize="0dp"
+        app:headerLayout="@layout/header_layout"
+        app:insetForeground="@null"
+        app:itemBackground="@drawable/ripple_navigation_selector"
+        app:itemHorizontalPadding="30dp"
+        app:itemIconPadding="30dp"
+        app:itemIconSize="24dp"
+        app:itemTextColor="@color/blue"
+        app:itemVerticalPadding="15dp"
+        app:menu="@menu/nav_menu" />
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
